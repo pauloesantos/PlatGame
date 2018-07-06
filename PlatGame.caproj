@@ -79,6 +79,11 @@
             <texture original-source="C:\Users\paulo\Downloads\Assets\2D\pixelPlataform01\Assets\sheet_9.png" />
             <tiles />
         </object-type>
+        <object-type name="tm_Spritesheet2" sid="169451729559205">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\paulo\Downloads\Assets\2D\pixelPlataform01\Assets\sheet_9.png" />
+            <tiles />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
