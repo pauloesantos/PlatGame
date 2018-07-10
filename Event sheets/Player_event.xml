@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player_event</name>
     <events>
-        <variable constant="0" name="rate_Punches" sid="434620235658788" static="0" type="number">0</variable>
+        <variable constant="0" name="rate_Punches" sid="434620235658788" static="0" type="number">0.1</variable>
         <variable constant="0" name="can_Shoot" sid="987489123959106" static="0" type="number">0</variable>
         <variable constant="0" name="num_Punches" sid="859237532679236" static="0" type="number">15</variable>
         <variable constant="0" name="anime_Speed" sid="699434704284275" static="0" type="number">10</variable>
@@ -76,9 +76,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="6" name="Set speed" sid="859940209926114" type="Obj_Player">
-                            <param id="0" name="Speed">5</param>
-                        </action>
                         <action behavior="Platform" id="7" name="Simulate control" sid="923184895505941" type="Obj_Player">
                             <param id="0" name="Control">2</param>
                         </action>
@@ -167,5 +164,75 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="958544888666916">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="295605057657497" type="System">
+                    <param id="0" name="Variable">num_Punches</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="540400238334990">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="115371887988077" type="Keyboard">
+                            <param id="0" name="Key">76</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="238490627147824" type="Obj_Player">
+                            <param id="0" name="Instance variable">player_direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;IDLE&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="859940209926114" type="Obj_Player">
+                            <param id="0" name="Speed">5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="222803597938751" type="Obj_Player">
+                            <param id="0" name="Instance variable">player_direction</param>
+                            <param id="1" name="Value">&quot;PUNCH&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="145950766970954" type="Obj_Player">
+                            <param id="0" name="Animation">&quot;ID_&quot;&amp;Obj_Player.player_direction</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="800092771949108">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="600703365548748" type="System">
+                                    <param id="0" name="Variable">can_Shoot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="999143625758041" type="Function">
+                                    <param id="0" name="Name">&quot;punchTimer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="396069404708916">
+            <conditions>
+                <condition id="0" name="On function" sid="937912252326771" type="Function">
+                    <param id="0" name="Name">&quot;punchTimer&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="902843800184258">
+            <conditions>
+                <condition id="0" name="On function" sid="653859551805142" type="Function">
+                    <param id="0" name="Name">&quot;punchEffect&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

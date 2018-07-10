@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -212,7 +213,7 @@
                             <point x="0.0394737" y="0.98913" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                    <frame duration="1" hotspotX="0.555556" hotspotY="1">
                         <collision-poly>
                             <point x="0.0694444" y="0.03125" />
                             <point x="0.972222" y="0.0520833" />
@@ -229,10 +230,10 @@
                             <point x="0.963235" y="0.03125" />
                             <point x="0.977941" y="0.921875" />
                             <point x="0.977941" y="0.96875" />
-                            <point x="0.0441176" y="0.9375" />
+                            <point x="0.0330882" y="0.976563" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\paulo\Downloads\Assets\2D\pixelPlataform01\Assets\characters_7.png">
+                    <frame duration="1" hotspotX="0.555556" hotspotY="1" original-source="C:\Users\paulo\Downloads\Assets\2D\pixelPlataform01\Assets\characters_7.png">
                         <collision-poly>
                             <point x="0.0347222" y="0.0326087" />
                             <point x="0.923611" y="0.0326087" />
@@ -242,39 +243,57 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="3" loop="0" name="ID_PUNCH" pingpong="0" repeatcount="1" repeatto="0" sid="325118980870328" speed="5">
-                    <frame duration="1" hotspotX="0.470588" hotspotY="0.958333" original-source="C:\Users\paulo\Downloads\Assets\2D\pixelPlataform01\Assets\characters_7.png">
+                <animation framecount="3" loop="1" name="ID_PUNCH" pingpong="0" repeatcount="1" repeatto="0" sid="325118980870328" speed="5">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="1" original-source="C:\Users\paulo\Downloads\Assets\2D\pixelPlataform01\Assets\characters_7.png">
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.470588" y="1" />
-                            <point x="0" y="1" />
+                            <point x="0.981618" y="0.966146" />
+                            <point x="0.00367647" y="0.96875" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="-3.29412" hotspotY="0.958333">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="1">
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="1" />
+                            <point x="0.985294" y="0.966146" />
+                            <point x="0" y="0.96875" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.470588" hotspotY="0.958333">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="1">
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.470588" y="1" />
-                            <point x="0" y="1" />
+                            <point x="1" y="0.963542" />
+                            <point x="0.00367647" y="0.963542" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="3" loop="0" name="ID_HIT" pingpong="0" repeatcount="1" repeatto="0" sid="261437520007400" speed="5">
-                    <frame duration="1" hotspotX="20.2778" hotspotY="2.45833" />
-                    <frame duration="1" hotspotX="17.6316" hotspotY="2.45833" />
-                    <frame duration="1" hotspotX="20.2778" hotspotY="2.45833" />
+                    <frame duration="1" hotspotX="0.555556" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.0451389" y="0.0338542" />
+                            <point x="0.96875" y="0.0416667" />
+                            <point x="0.947917" y="0.963542" />
+                            <point x="0.0416667" y="0.973958" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.526316" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.0493421" y="0.0260417" />
+                            <point x="0.99671" y="0.0364583" />
+                            <point x="0.930921" y="0.950521" />
+                            <point x="0.0460526" y="0.979167" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.555556" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.0381944" y="0.0442708" />
+                            <point x="0.993056" y="0.0416667" />
+                            <point x="0.934028" y="0.971354" />
+                            <point x="0.0590278" y="0.955729" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -330,6 +349,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Function" sid="185256805468393">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -368,6 +390,7 @@
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="7" />
+        <global-instance type="Function" uid="20" />
     </global-instances>
     <sounds-folder />
     <music-folder />
